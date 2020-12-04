@@ -52,6 +52,26 @@ public:
     }
 };
 
+class Teacher :public Human {
+protected:
+    int work_experience;
+public:
+    Teacher() {
+        work_experience = 5;
+    }
+    Teacher(int work_experience) {
+        this->work_experience = work_experience;
+    }
+    Teacher(const Teacher& t) {
+        work_experience = t.work_experience;
+    }
+    ~Teacher(){}
+
+    virtual void about_me() {
+        cout<< "Меня зовут " << name.c_str() << " и я преподаю программирование уже " <<work_experience<< " лет.\n";
+    }
+};
+
 int main()
 {
 
