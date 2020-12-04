@@ -1,2 +1,5 @@
 ﻿  Lab3.cpp
+C:\Users\ilya\source\repos\OOP\Lab3\Lab3\Lab3.cpp(43,20): warning C4552: "-": результат выражения не используется
+C:\Users\ilya\source\repos\OOP\Lab3\Lab3\Lab3.cpp(151,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ilya\source\repos\OOP\Lab3\Lab3\Lab3.cpp(131): warning C4715: random_object: значение возвращается не при всех путях выполнения
   Lab3.vcxproj -> C:\Users\ilya\source\repos\OOP\Lab3\Debug\Lab3.exe
