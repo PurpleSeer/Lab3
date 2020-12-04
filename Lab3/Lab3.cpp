@@ -72,6 +72,57 @@ public:
     }
 };
 
+class Storage {
+public:
+    Human** objects;
+    Storage() {}
+    ~Storage(){}
+
+    void initialisat(int count) {
+        objects = new Human * [count];
+        for (int i = 0; i < count; ++i)
+            objects[i] = NULL;
+    }
+
+    void add_object(int index, Human* object) {
+        objects[index] = object;
+    }
+
+    void delete_object(int index) {
+        delete objects[index];
+        objects[index] = NULL;
+
+    }
+
+    void method(int index) {
+        objects[index]->about_me();
+
+    }
+
+    bool check_empty(int index) {
+        if (objects[index] == NULL)
+            return true;
+        else return false;
+    }
+
+    void appeal_all(int n) {
+        for (int i = 0; i < n; ++i) {
+            printf("[%d] место ", i);
+            if (check_empty(i))
+                printf("Пустое\n");
+            else method(i);
+        }
+    }
+
+    int occupied(int size) {
+        int count_occupied = 0;
+        for (int i = 0; i < size; ++i)
+            if (!check_empty(i))
+                ++count_occupied;
+        return count_occupied;
+    }
+};
+
 int main()
 {
 
